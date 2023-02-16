@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir-Next";
+}
+
+
+#root {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 86rem;
+}
+
+.button {
+    margin: 40rem 5rem 5rem 5rem;
+    box-sizing: content-box;
+    width: 35%;
+    height: 3.125rem;
+    background-color: #ffffff;
+    border-radius: 30px;
+  
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(66, 0, 147);
+
+    &:hover {
+        cursor: pointer;
+        animation: shake 0.85s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+
+        vertical-align: middle;
+        transform: perspective(10px) translateZ(0);
+        box-shadow: 0 0 30px rgb(255, 168, 80);
+        position: relative;
+      }
+      
+      @keyframes shake {
+        10%,
+        90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+      
+        20%,
+        80% {
+          transform: translate3d(2px, 0, 0);
+        }
+      
+        30%,
+        50%,
+        70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+      
+        40%,
+        60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+      
+  }
+  
+  
